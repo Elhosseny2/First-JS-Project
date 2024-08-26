@@ -23,11 +23,11 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice) {
-    alert("You and PC are tied!");
+    alert("It's a tie!");
   } else if (
     (humanChoice == "rock" && computerChoice == "scissors") ||
-    (humanChoice == "paper" && computerChoice == "rock") ||
-    (humanChoice == "scissors" && computerChoice == "paper")
+    (humanChoice == "scissors" && computerChoice == "paper") ||
+    (humanChoice == "paper" && computerChoice == "rock")
   ) {
     alert("You win! Congratulations!");
     humanScore++;
