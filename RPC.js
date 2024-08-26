@@ -6,12 +6,12 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 function getHumanChoice() {
-  let ans = prompt(" Choose a Symbol ");
+  let ans = prompt("Choose a Symbol: rock, paper, or scissors").toLowerCase();
   while (true) {
     if (ans == "rock" || ans == "paper" || ans == "scissors") {
       break;
     } else {
-      ans = prompt("invalid symbol, try again.");
+      ans = prompt("Invalid symbol, try again: rock, paper, or scissors").toLowerCase();
     }
   }
   return ans;
