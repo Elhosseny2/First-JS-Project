@@ -11,7 +11,9 @@ function getHumanChoice() {
     if (ans == "rock" || ans == "paper" || ans == "scissors") {
       break;
     } else {
-      ans = prompt("Invalid symbol, try again: rock, paper, or scissors").toLowerCase();
+      ans = prompt(
+        "Invalid symbol, try again: rock, paper, or scissors"
+      ).toLowerCase();
     }
   }
   return ans;
@@ -19,17 +21,19 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice,computerChoice) {
+function playRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice) {
     alert("You and PC are tied!");
-  } else if (humanChoice == "rock" && computerChoice == "scissors") {
-    alert("You win! congratulations!");
-  } else if (humanChoice == "paper" && computerChoice == "rock") {
-    alert("You win congratulations");
-  } else if (humanChoice == "scissors" && computerChoice == "paper") {
-    alert("You win congratulations");
+  } else if (
+    (humanChoice == "rock" && computerChoice == "scissors") ||
+    (humanChoice == "paper" && computerChoice == "rock") ||
+    (humanChoice == "scissors" && computerChoice == "paper")
+  ) {
+    alert("You win! Congratulations!");
+    humanScore++;
   } else {
-    alert("You loss, PC wins!");
+    alert("You lose, PC wins!");
+    computerScore++;
   }
 }
 const humanSelection = getHumanChoice();
