@@ -3,8 +3,6 @@ function getComputerChoice() {
   let PC = arr[Math.floor(Math.random() * arr.length)];
   return PC;
 }
-console.log(getComputerChoice());
-
 function getHumanChoice() {
   let ans = prompt("Choose a Symbol: rock, paper, or scissors").toLowerCase();
   while (true) {
@@ -36,7 +34,30 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
   }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-alert(`Scores:\nHuman: ${humanScore}\nPC: ${computerScore}`);
+
+function playGame () {
+  function playRound(humanChoice, computerChoice) {
+    if (humanChoice == computerChoice) {
+      alert("It's a tie!");
+    } else if (
+      (humanChoice == "rock" && computerChoice == "scissors") ||
+      (humanChoice == "scissors" && computerChoice == "paper") ||
+      (humanChoice == "paper" && computerChoice == "rock")
+    ) {
+      alert("You win! Congratulations!");
+      humanScore++;
+    } else {
+      alert("You lose, PC wins!");
+      computerScore++;
+    }
+  }
+  let humanScore = 0;
+  let computerScore = 0;
+  for (let i =0; i <5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection , computerSelection)
+  }``
+  console.log(`Scores:\nHuman: ${humanScore}\nPC: ${computerScore}`);
+}
+playGame();
