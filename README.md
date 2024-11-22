@@ -16,3 +16,5 @@ No need to open the console, it is a user-friendly, interactive and simple web g
 
 
 This project was a great way to apply JavaScript concepts in a fun and interactive way. It also strengthened my problem-solving skills as I worked through game mechanics.
+
+A live preview is on: https://elhosseny2.github.io/First-JS-Project/RPC.html
