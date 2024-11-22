@@ -69,7 +69,7 @@ paperBtn.addEventListener("click", () => {
     disableButtons();
  }
  else if ( computerScore === 5 ) {
-     alert ("Game over, good luck next time")
+     alert ("Computer wins, good luck next time")
      disableButtons();
  }
 });
@@ -122,4 +122,3 @@ let results = document.querySelector('#results');
 //   console.log(`Scores:\nHuman: ${humanScore}\nPC: ${computerScore}\nDraw: ${draw}`);
 // }
 // playGame();
-``
